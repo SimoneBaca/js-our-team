@@ -19,6 +19,13 @@ Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg*/
 // MILESTONE 0:
 // Creare l'array di oggetti con le informazioni fornite.
 
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
+//  MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+
 const team = [
     {
         name: 'Wayne Barnett',
@@ -48,25 +55,22 @@ const team = [
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        image: 'barbara-ramos-graphic-designer.jpg',
+        image: 'scott-estrada-graphic.jpg'
     }
 
 ];
 
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-let key;
 
-for (key in team) {
-    console.log(team[key])
+let cont = document.getElementById('container')
+
+
+for (let i = 0; i < team.length; i++) {
+
+
+    for (let key in team[i]) {
+        console.log(team[i][key])
+        container.innerHTML += team[i][key]
+
+    }
 
 }
-//  MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
-let cont = document.getElementById('container').innerHTML = team[key]
-
-
-// for(let i = 0 ; i < team.length ; i++){
-         // container.innerHTML = team{key}
-//     document.write(team[i])
-//}
